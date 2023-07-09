@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\V1\TravelController;
+use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('travels', [TravelController::class, 'index']);
+
+Route::get('test', TestController::class);
