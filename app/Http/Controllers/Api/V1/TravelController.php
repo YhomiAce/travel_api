@@ -11,7 +11,7 @@ class TravelController extends Controller
 {
     public function index()
     {
-        $travels = Travel::where('is_public', true)->paginate(3);
+        $travels = Travel::where('is_public', true)->paginate(15);
         return TravelResource::collection($travels);
     }
 }

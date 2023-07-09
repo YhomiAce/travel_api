@@ -52,4 +52,9 @@ class Travel extends Model
     // {
     //     return $this->number_of_days - 1;
     // }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

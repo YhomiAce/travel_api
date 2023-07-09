@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\TourController;
 use App\Http\Controllers\Api\V1\TravelController;
 use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
@@ -21,5 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('travels', [TravelController::class, 'index']);
+// Route::get('travels/{travel:slug}/tours', [TourController::class, 'index']);
+// Or with getRouteKeyName in model specifying the searchable column
+Route::get('travels/{travel}/tours', [TourController::class, 'index']);
 
 Route::get('test', TestController::class);
